@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов»
 
 * Студент: [Кристина Мищенко](https://up.htmlacademy.ru/react/10/user/959701).
-* Наставник: `Неизвестно`.
+* Наставник: [Софья Лопаченок](https://up.htmlacademy.ru/profession/react/9/react/10/user/130414).
 
 ---
 

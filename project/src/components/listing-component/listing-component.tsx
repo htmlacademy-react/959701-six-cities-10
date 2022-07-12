@@ -1,5 +1,5 @@
-function ListingComponent(): JSX.Element {
-  return (<article className="cities__card place-card">
+const ListingComponent = (): JSX.Element => (
+  <article className="cities__card place-card">
     <div className="place-card__mark">
       <span>Premium</span>
     </div>
@@ -44,7 +44,7 @@ function ListingComponent(): JSX.Element {
         </a>
       </h2>
       <p className="place-card__type">Apartment</p>
-    </div></article>);
-}
+    </div>
+  </article>);
 
 export default ListingComponent;

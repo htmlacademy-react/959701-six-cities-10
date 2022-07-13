@@ -11,4 +11,3 @@ const MainEmptyComponent = (): JSX.Element => (
 );
 
 export default MainEmptyComponent;
-

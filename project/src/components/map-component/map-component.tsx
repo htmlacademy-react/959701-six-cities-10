@@ -1,6 +1,4 @@
-function MapComponent(): JSX.Element {
-  return (
-    <section className="cities__map map" />);
-}
+const MapComponent = (): JSX.Element => (
+  <section className="cities__map map" />);
 
 export default MapComponent;

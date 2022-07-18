@@ -31,7 +31,7 @@ const App = ({ offers }: AppProps): JSX.Element => (
         path={AppRoute.Favorites}
         element={
           <PrivateRoute
-            authorizationStatus={AuthorizationStatus.Auth}
+            authorizationStatus={AuthorizationStatus.NoAuth}
           >
             <FavoritesScreen
               offers={offers}

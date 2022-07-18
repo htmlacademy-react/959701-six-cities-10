@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { AppRoute } from '../../const';
 import LogoComponent from '../../components/logo-component/logo-component';
 
 const NotFoundScreen = (): JSX.Element => (
@@ -15,7 +16,7 @@ const NotFoundScreen = (): JSX.Element => (
       <div className="page__login-container container">
         <div>
           <h1>404 Not Found</h1>
-          <p className='locations__item-link'><Link to="/">Go to main page</Link></p>
+          <p className='locations__item-link'><Link to={AppRoute.Main}>Go to main page</Link></p>
         </div>
       </div>
     </main>

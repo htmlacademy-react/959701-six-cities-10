@@ -12,7 +12,6 @@ const OffersListComponent = ({ offers }: OffersListComponentProps): JSX.Element 
 
   const offerMouseOverHandle = (id: number) => {
     setActiveOffer({ ...activeOfferId, id: id });
-    console.log(activeOfferId);
   };
   return (
     <section className="cities__places places">

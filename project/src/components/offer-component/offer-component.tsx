@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Offer } from '../../types/offers';
+import { AppRoute } from '../../const';
 
 type OfferComponentProps = {
   offer: Offer,
@@ -17,7 +18,7 @@ const ListingComponent = ({ offer, offerMouseOverHandle}: OfferComponentProps): 
           <span>Premium</span>
         </div> : null}
       <div className="cities__image-wrapper place-card__image-wrapper">
-        <Link to="/offer">
+        <Link to={AppRoute.Room}>
           <img className="place-card__image" src={offer.previewImage}
             width="260"
             height="200"
@@ -52,7 +53,7 @@ const ListingComponent = ({ offer, offerMouseOverHandle}: OfferComponentProps): 
           </div>
         </div>
         <h2 className="place-card__name">
-          <Link to="/offer">
+          <Link to={AppRoute.Room}>
             {offer.title}
           </Link>
         </h2>

@@ -13,7 +13,7 @@ const FavoriteItemComponent = ({ offer }: FavoriteItemComponentProps): JSX.Eleme
       <div className="favorites__locations locations locations--current">
         <div className="locations__item">
           <Link className="locations__item-link" to="/">
-            <span>Amsterdam</span>
+            <span>{offer.city.name}</span>
           </Link>
         </div>
       </div>
@@ -25,7 +25,7 @@ const FavoriteItemComponent = ({ offer }: FavoriteItemComponentProps): JSX.Eleme
             </div> : null}
           <div className="favorites__image-wrapper place-card__image-wrapper">
             <Link to="/">
-              <img className="place-card__image" src="img/apartment-small-03.jpg" width="150" height="110" alt="Place" />
+              <img className="place-card__image" src={offer.previewImage} width="150" height="110" alt={offer.title} />
             </Link>
           </div>
           <div className="favorites__card-info place-card__info">
@@ -34,7 +34,7 @@ const FavoriteItemComponent = ({ offer }: FavoriteItemComponentProps): JSX.Eleme
                 <b className="place-card__price-value">&euro;{offer.price}</b>
                 <span className="place-card__price-text">&#47;&nbsp;night</span>
               </div>
-              <button className="place-card__bookmark-button place-card__bookmark-button--active button" type="button">
+              <button className={offer.isFavorite ? 'place-card__bookmark-button--active button' : 'place-card__bookmark-button button'} type="button">
                 <svg className="place-card__bookmark-icon" width="18" height="19">
                   <use xlinkHref="#icon-bookmark"></use>
                 </svg>

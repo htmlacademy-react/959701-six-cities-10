@@ -2,14 +2,16 @@ import { Link } from 'react-router-dom';
 import { Offer } from '../../types/offers';
 
 type OfferComponentProps = {
-  offer: Offer
+  offer: Offer,
+  offerMouseOverHandle: (id: number) => void;
 }
 
-const ListingComponent = ({ offer }: OfferComponentProps): JSX.Element => {
+const ListingComponent = ({ offer, offerMouseOverHandle}: OfferComponentProps): JSX.Element => {
   const maxRating = 5;
   const currentRating = `${Math.round(offer.rating) * 100 / maxRating}%`;
+
   return (
-    <article className="cities__card place-card">
+    <article className="cities__card place-card" onMouseOver={() => offerMouseOverHandle(offer.id)}>
       {offer.isPremium ?
         <div className="place-card__mark">
           <span>Premium</span>
@@ -19,7 +21,7 @@ const ListingComponent = ({ offer }: OfferComponentProps): JSX.Element => {
           <img className="place-card__image" src={offer.previewImage}
             width="260"
             height="200"
-            alt="Place"
+            alt={offer.title}
           />
         </Link>
       </div>

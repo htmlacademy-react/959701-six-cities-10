@@ -1,6 +1,6 @@
 import { Offers } from '../../types/offers';
 import OfferCard from '../offer-card/offer-card';
-import Sorting from '../sorting/sorting';
+import SortingComponent from '../sorting/sorting';
 import { useState } from 'react';
 
 type OffersListProps = {
@@ -8,16 +8,16 @@ type OffersListProps = {
 }
 
 const OffersList = ({ offers }: OffersListProps): JSX.Element => {
-  const [activeOfferId, setActiveOffer] = useState({ id: 0 });
+  const [, setActiveOfferId] = useState(0);
 
   const offerMouseOverHandle = (id: number) => {
-    setActiveOffer({ ...activeOfferId, id: id });
+    setActiveOfferId(id);
   };
   return (
     <section className="cities__places places">
       <h2 className="visually-hidden">Places</h2>
       <b className="places__found">{offers.length} places to stay in Amsterdam</b>
-      <Sorting offers={offers} />
+      <SortingComponent offers={offers} />
       <div className="cities__places-list places__list tabs__content">
         {
           offers.map((offer) => (

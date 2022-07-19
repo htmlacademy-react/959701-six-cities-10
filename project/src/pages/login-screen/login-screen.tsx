@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../const';
-import LogoComponent from '../../components/logo-component/logo-component';
+import Logo from '../../components/logo/logo';
 
 const LoginScreen = (): JSX.Element => (
   <div className="page page--gray page--login">
     <header className="header">
       <div className="container">
         <div className="header__wrapper">
-          <LogoComponent />
+          <Logo />
         </div>
       </div>
     </header>

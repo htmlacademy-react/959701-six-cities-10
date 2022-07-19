@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../const';
-import HeaderComponent from '../../components/header-component/header-component';
-import FavoriteItemComponent from '../../components/favorite-item-component/favorite-item-component';
-import FavoritesEmptyComponent from '../../components/favorites-empty-component/favorites-empty-component';
+import Header from '../../components/header/header';
+import FavoriteItem from '../../components/favorite-item/favorite-item';
+import FavoritesEmpty from '../../components/favorites-empty/favorites-empty';
 import { Offers } from '../../types/offers';
 
 type FavoriteScreenComponentProps = {
@@ -11,7 +11,7 @@ type FavoriteScreenComponentProps = {
 
 const FavoritesScreen = ({offers} : FavoriteScreenComponentProps): JSX.Element => (
   <div className="page">
-    <HeaderComponent />
+    <Header />
     <main className="page__main page__main--favorites">
       <div className="page__favorites-container container">
         {offers.length > 0 ?
@@ -20,13 +20,13 @@ const FavoritesScreen = ({offers} : FavoriteScreenComponentProps): JSX.Element =
             <ul className="favorites__list">
               {
                 offers.map((offer) => (
-                  <FavoriteItemComponent key={offer.id}
+                  <FavoriteItem key={offer.id}
                     offer = {offer}
                   />
                 ))
               }
             </ul>
-          </section> : <FavoritesEmptyComponent/>}
+          </section> : <FavoritesEmpty/>}
 
       </div>
     </main>

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../const';
 
-const LogoComponent = (): JSX.Element => (
+const Logo = (): JSX.Element => (
 
   <div className="header__left">
     <Link to={AppRoute.Main}>
@@ -10,4 +10,4 @@ const LogoComponent = (): JSX.Element => (
   </div>
 );
 
-export default LogoComponent;
+export default Logo;

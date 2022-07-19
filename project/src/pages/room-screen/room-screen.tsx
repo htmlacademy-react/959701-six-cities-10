@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../const';
-import HeaderComponent from '../../components/header-component/header-component';
-import ReviewFormComponent from '../../components/review-form-component/review-form-component';
+import Header from '../../components/header/header';
+import ReviewForm from '../../components/review-form/review-form';
 
 const RoomScreen = (): JSX.Element => (
   <div className="page">
-    <HeaderComponent />
+    <Header />
     <main className="page__main page__main--property">
       <section className="property">
         <div className="property__gallery-container container">
@@ -158,7 +158,7 @@ const RoomScreen = (): JSX.Element => (
                   </div>
                 </li>
               </ul>
-              <ReviewFormComponent />
+              <ReviewForm />
             </section>
           </div>
         </div>

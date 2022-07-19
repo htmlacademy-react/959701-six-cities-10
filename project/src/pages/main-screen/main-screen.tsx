@@ -1,7 +1,7 @@
-import MapComponent from '../../components/map-component/map-component';
-import HeaderComponent from '../../components/header-component/header-component';
-import FilterComponent from '../../components/filter-component/filter-component';
-import OffersListComponent from '../../components/offers-list-component/offers-list-component';
+import Map from '../../components/map/map';
+import Header from '../../components/header/header';
+import Filter from '../../components/filter/filter';
+import OffersList from '../../components/offers-list/offers-list';
 import { Offers } from '../../types/offers';
 
 type MainScreenProps = {
@@ -10,19 +10,19 @@ type MainScreenProps = {
 
 const MainScreen = ({ offers }: MainScreenProps): JSX.Element => (
   <div className="page page--gray page--main">
-    <HeaderComponent />
+    <Header />
     <main className="page__main page__main--index">
       <h1 className="visually-hidden">Cities</h1>
       <div className="tabs">
-        <FilterComponent />
+        <Filter />
       </div>
       <div className="cities">
         <div className="cities__places-container container">
-          <OffersListComponent
+          <OffersList
             offers={offers}
           />
           <div className="cities__right-section">
-            <MapComponent />
+            <Map />
           </div>
         </div>
       </div>

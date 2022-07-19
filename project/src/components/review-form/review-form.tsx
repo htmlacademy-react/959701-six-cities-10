@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const ReviewFormComponent = (): JSX.Element => {
+const ReviewForm = (): JSX.Element => {
   const [formData, setFormData] = useState({
     rating: '',
     comment: '',
@@ -71,4 +71,4 @@ const ReviewFormComponent = (): JSX.Element => {
   );
 };
 
-export default ReviewFormComponent;
+export default ReviewForm;

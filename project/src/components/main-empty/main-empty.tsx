@@ -1,4 +1,4 @@
-const MainEmptyComponent = (): JSX.Element => (
+const MainEmpty = (): JSX.Element => (
   <div className="cities__places-container cities__places-container--empty container">
     <section className="cities__no-places">
       <div className="cities__status-wrapper tabs__content">
@@ -10,4 +10,4 @@ const MainEmptyComponent = (): JSX.Element => (
   </div>
 );
 
-export default MainEmptyComponent;
+export default MainEmpty;

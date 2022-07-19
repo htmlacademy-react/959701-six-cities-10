@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import LogoComponent from '../logo-component/logo-component';
+import Logo from '../logo/logo';
 import { AppRoute } from '../../const';
 
-const HeaderComponent = (): JSX.Element => (
+const Header = (): JSX.Element => (
   <header className="header">
     <div className="container">
       <div className="header__wrapper">
-        <LogoComponent />
+        <Logo />
         <nav className="header__nav">
           <ul className="header__nav-list">
             <li className="header__nav-item user">
@@ -30,4 +30,4 @@ const HeaderComponent = (): JSX.Element => (
   </header>
 );
 
-export default HeaderComponent;
+export default Header;

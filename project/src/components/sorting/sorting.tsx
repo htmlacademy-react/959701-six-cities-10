@@ -1,10 +1,10 @@
 import { Offers } from '../../types/offers';
 
-type SortingComponentProps = {
+type SortingProps = {
   offers: Offers
 }
 
-const SortingComponent = ({ offers }: SortingComponentProps): JSX.Element => (
+const Sorting = ({ offers }: SortingProps): JSX.Element => (
   <form className="places__sorting" action="#" method="get">
     <span className="places__sorting-caption">Sort by</span>
     <span className="places__sorting-type">
@@ -33,4 +33,4 @@ const SortingComponent = ({ offers }: SortingComponentProps): JSX.Element => (
   </form>
 );
 
-export default SortingComponent;
+export default Sorting;

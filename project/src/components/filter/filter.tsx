@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const FilterComponent = (): JSX.Element => (
+const Filter = (): JSX.Element => (
   <section className="locations container">
     <ul className="locations__list tabs__list">
       <li className="locations__item">
@@ -37,4 +37,4 @@ const FilterComponent = (): JSX.Element => (
   </section>
 );
 
-export default FilterComponent;
+export default Filter;

@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { Offer } from '../../types/offers';
 
-type FavoriteItemComponentProps = {
+type FavoriteItemProps = {
   offer: Offer
 }
 
-const FavoriteItemComponent = ({ offer }: FavoriteItemComponentProps): JSX.Element => {
+const FavoriteItem = ({ offer }: FavoriteItemProps): JSX.Element => {
   const maxRating = 5;
   const currentRating = `${Math.round(offer.rating) * 100 / maxRating}%`;
   return (
@@ -60,4 +60,4 @@ const FavoriteItemComponent = ({ offer }: FavoriteItemComponentProps): JSX.Eleme
   );
 };
 
-export default FavoriteItemComponent;
+export default FavoriteItem;

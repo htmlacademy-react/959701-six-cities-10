@@ -1,13 +1,13 @@
 import { Offers } from '../../types/offers';
-import OfferComponent from '../offer-component/offer-component';
-import SortingComponent from '../sorting-component/sorting-component';
+import OfferCard from '../offer-card/offer-card';
+import Sorting from '../sorting/sorting';
 import { useState } from 'react';
 
-type OffersListComponentProps = {
+type OffersListProps = {
   offers: Offers
 }
 
-const OffersListComponent = ({ offers }: OffersListComponentProps): JSX.Element => {
+const OffersList = ({ offers }: OffersListProps): JSX.Element => {
   const [activeOfferId, setActiveOffer] = useState({ id: 0 });
 
   const offerMouseOverHandle = (id: number) => {
@@ -17,11 +17,11 @@ const OffersListComponent = ({ offers }: OffersListComponentProps): JSX.Element 
     <section className="cities__places places">
       <h2 className="visually-hidden">Places</h2>
       <b className="places__found">{offers.length} places to stay in Amsterdam</b>
-      <SortingComponent offers={offers} />
+      <Sorting offers={offers} />
       <div className="cities__places-list places__list tabs__content">
         {
           offers.map((offer) => (
-            <OfferComponent key={offer.id}
+            <OfferCard key={offer.id}
               offer={offer}
               offerMouseOverHandle={offerMouseOverHandle}
             />
@@ -32,4 +32,4 @@ const OffersListComponent = ({ offers }: OffersListComponentProps): JSX.Element 
   );
 };
 
-export default OffersListComponent;
+export default OffersList;

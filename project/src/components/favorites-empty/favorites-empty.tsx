@@ -1,5 +1,5 @@
 
-const FavoritesEmptyComponent = (): JSX.Element => (
+const FavoritesEmpty = (): JSX.Element => (
   <section className="favorites favorites--empty">
     <h1 className="visually-hidden">Favorites (empty)</h1>
     <div className="favorites__status-wrapper">
@@ -9,4 +9,4 @@ const FavoritesEmptyComponent = (): JSX.Element => (
   </section>
 );
 
-export default FavoritesEmptyComponent;
+export default FavoritesEmpty;

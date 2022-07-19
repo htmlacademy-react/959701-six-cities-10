@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 import { Offer } from '../../types/offers';
 import { AppRoute } from '../../const';
 
-type OfferComponentProps = {
+type OfferCardProps = {
   offer: Offer,
   offerMouseOverHandle: (id: number) => void;
 }
 
-const ListingComponent = ({ offer, offerMouseOverHandle}: OfferComponentProps): JSX.Element => {
+const OfferCard = ({ offer, offerMouseOverHandle }: OfferCardProps): JSX.Element => {
   const maxRating = 5;
   const currentRating = `${Math.round(offer.rating) * 100 / maxRating}%`;
 
@@ -63,4 +63,4 @@ const ListingComponent = ({ offer, offerMouseOverHandle}: OfferComponentProps): 
   );
 };
 
-export default ListingComponent;
+export default OfferCard;

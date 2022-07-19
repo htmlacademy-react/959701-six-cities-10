@@ -1,6 +1,6 @@
 import { Offers } from '../../types/offers';
 import OfferCard from '../offer-card/offer-card';
-import SortingComponent from '../sorting/sorting';
+import Sorting from '../sorting/sorting';
 import { useState } from 'react';
 
 type OffersListProps = {
@@ -17,7 +17,7 @@ const OffersList = ({ offers }: OffersListProps): JSX.Element => {
     <section className="cities__places places">
       <h2 className="visually-hidden">Places</h2>
       <b className="places__found">{offers.length} places to stay in Amsterdam</b>
-      <SortingComponent offers={offers} />
+      <Sorting offers={offers} />
       <div className="cities__places-list places__list tabs__content">
         {
           offers.map((offer) => (

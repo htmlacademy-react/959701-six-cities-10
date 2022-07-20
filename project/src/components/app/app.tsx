@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AppRoute, AuthorizationStatus } from '../../const';
-import PrivateRoute from '../private-route-component/private-route-component';
+import { Offers } from '../../types/offers';
+import PrivateRoute from '../private-route/private-route';
 import MainScreen from '../../pages/main-screen/main-screen';
 import LoginScreen from '../../pages/login-screen/login-screen';
 import NotFoundScreen from '../../pages/not-found-screen/not-found-screen';
@@ -8,15 +9,19 @@ import FavoritesScreen from '../../pages/favorites-screen/favorites-screen';
 import RoomScreen from '../../pages/room-screen/room-screen';
 
 type AppProps = {
-  listingsCount: number;
+  offers: Offers
 }
 
-const App = ({ listingsCount: offersCount }: AppProps): JSX.Element => (
+const App = ({ offers }: AppProps): JSX.Element => (
   <BrowserRouter>
     <Routes>
       <Route
         path={AppRoute.Main}
-        element={<MainScreen listingsCount={offersCount} />}
+        element={
+          <MainScreen
+            offers={offers}
+          />
+        }
       />
       <Route
         path={AppRoute.Login}
@@ -28,7 +33,9 @@ const App = ({ listingsCount: offersCount }: AppProps): JSX.Element => (
           <PrivateRoute
             authorizationStatus={AuthorizationStatus.NoAuth}
           >
-            <FavoritesScreen />
+            <FavoritesScreen
+              offers={offers}
+            />
           </PrivateRoute>
         }
       />

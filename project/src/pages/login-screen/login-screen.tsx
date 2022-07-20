@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
-import LogoComponent from '../../components/logo-component/logo-component';
+import { AppRoute } from '../../const';
+import Logo from '../../components/logo/logo';
 
 const LoginScreen = (): JSX.Element => (
   <div className="page page--gray page--login">
     <header className="header">
       <div className="container">
         <div className="header__wrapper">
-          <LogoComponent />
+          <Logo />
         </div>
       </div>
     </header>
@@ -29,7 +30,7 @@ const LoginScreen = (): JSX.Element => (
         </section>
         <section className="locations locations--login locations--current">
           <div className="locations__item">
-            <Link className="locations__item-link" to="/">
+            <Link className="locations__item-link" to={AppRoute.Main}>
               <span>Amsterdam</span>
             </Link>
           </div>
